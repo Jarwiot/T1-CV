@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel = "stylesheet" href = "CVstyle.css"/>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+    <h1>JOSE ANTONIO RUIZ MALDONADO</h1>
+    <img src="129932.jpeg" alt="JARM" width="100px" title="JARM"/>
+    
+    <BR>
+
+
+    </BR>
+    <label for="language-select">Seleccionar idioma / select languaje:</label>
+    <select id="language-select" onchange="translatePage()">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+    </select>
+
+    <h2 id="perfil-title">PERFIL</h2>
+    <p id="perfil-content" title="numero">+52 3313241120</p>
+    <p id="Nacionality-content" title="nacionalidad">Nacionalidad: Mexicana</p>
+    <pre id="email-content">jose.ruiz0337@alumnos.udg.mx</pre>
+
+    <h3 id="competencias-title">COMPETENCIAS</h3>
+    <p id="competencias-content" title="competencias">
+        &nbsp;•manejo de lenguajes c, c++, python, java.<br>
+        &nbsp;•manejo de programas excel, word, power point.<br>
+        &nbsp;•manejo de registros y bases de datos.<br>
+        &nbsp;•investigación y desarrollo.<br>
+        &nbsp;•atención al cliente.<br>
+        &nbsp;•organización.<br>
+        &nbsp;•trabajo en equipo.<br>
+        &nbsp;•competencias digitales.
+    </p>
+
+    <h4 id="sintesis-title">SINTESIS</h4>
+    <p id="sintesis-content" title="competencias">
+        &nbsp;Estudiante con gran capacidad de organización y disciplina y con ansias<br>
+        &nbsp;de aprender. Abordo mis estudios con responsabilidad, priorizando mi<br>
+        &nbsp;formación académica para obtener resultados que lo reflejen. Quisiera<br>
+        &nbsp;continuar perfeccionando mis habilidades y conocimientos.<BR>
+
+    </p>
+
+    <h5 id="experiencia-title">EXPERIENCIA</h5>
+    <p id="experiencia-content" title = "experiencia">
+        &nbsp;&nbsp;&nbsp;Enero 2015 - presente <BR>
+        &nbsp;&nbsp;&nbsp;Abarrotes Ruiz | San Pedrito , Tlaquepaque, Jalisco Cajero <BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;• Limpieza, organización y mantenimiento de la zona de trabajo. <BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;• Registro detallado de todas las transacciones para asegurar el cuadre de caja al final del día. <BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;• Atención al cliente de manera amable y profesional. <BR>
+    </p>  
+
+    <h6 id="estudios-title">ESTUDIOS </h6>
+    <p id="estudios-content" title = "estudios">
+        &nbsp;&nbsp;&nbsp;&nbsp;Agosto 2019 - Junio 2025<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Licenciatura en curso: Ingenieria en Computacion<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUCEI Universidad de Guadalajara | Guadalajara<BR>
+            <BR>
+
+            </BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;enero 2016 - diciembre 2018<BR>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Estudio Nivel Medio Superior finalizado (Escuela Vocacional - Universidad de Guadalajara).<BR>
+    </p>
+        <BR>
+        </BR>
+
+    <script>
+        function translatePage() {
+            const language = document.getElementById('language-select').value;
+            if (language === 'en') {
+                document.getElementById('perfil-title').innerText = 'PROFILE';
+                document.getElementById('perfil-content').innerText = '+52 3313241120';
+                document.getElementById('Nacionality-content').innerText = 'Nacionality: Mexican';
+                document.getElementById('email-content').innerText = 'jose.ruiz0337@alumnos.udg.mx';
+                document.getElementById('competencias-title').innerText = 'SKILLS';
+                document.getElementById('competencias-content').innerHTML = `
+                    &nbsp;•knowledge of C, C++, Python, Java.<br>
+                    &nbsp;•knowledge of Excel, Word, PowerPoint.<br>
+                    &nbsp;•knowledge of records and databases.<br>
+                    &nbsp;•research and development.<br>
+                    &nbsp;•customer service.<br>
+                    &nbsp;•organization.<br>
+                    &nbsp;•teamwork.<br>
+                    &nbsp;•digital skills.
+                `;
+                document.getElementById('sintesis-title').innerText = 'SUMMARY';
+                document.getElementById('sintesis-content').innerHTML = `
+                    &nbsp;Student with great organizational and discipline skills and eager<br>
+                    &nbsp;to learn. I approach my studies with responsibility, prioritizing my<br>
+                    &nbsp;academic training to achieve results that reflect it. I would like<br>
+                    &nbsp;to continue honing my skills and knowledge.<br>
+                `;
+                document.getElementById('experiencia-title').innerText = 'EXPERIENCE';
+                document.getElementById('experiencia-content').innerHTML = `
+                    &nbsp;&nbsp;&nbsp;January 2015 - present <BR>
+                    &nbsp;&nbsp;&nbsp;Abarrotes Ruiz | San Pedrito, Tlaquepaque, Jalisco Cashier <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;• Cleaning, organization, and maintenance of the work area. <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;• Detailed record of all transactions to ensure balance at the end of the day. <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;•Customer service in a friendly and professional manner. <BR>
+                `;
+                document.getElementById('estudios-title').innerText = 'EDUCATION';
+                document.getElementById('estudios-content').innerHTML = `
+                    &nbsp;&nbsp;&nbsp;&nbsp;August 2019 - June 2025 <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Ongoing degree: Computer Engineering <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUCEI University of Guadalajara | Guadalajara <BR>
+                        <BR>
+
+                        </BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;January 2016 - December 2018 <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;•Completed High School (Escuela Vocacional - University of Guadalajara). <BR>
+                `;
+            } else {
+                document.getElementById('perfil-title').innerText = 'PERFIL';
+                document.getElementById('perfil-content').innerText = '+52 3313241120';
+                document.getElementById('Nacionality-content').innerText = 'Nacionalidad: Mexicana';
+                document.getElementById('email-content').innerText = 'jose.ruiz0337@alumnos.udg.mx';
+                document.getElementById('competencias-title').innerText = 'COMPETENCIAS';
+                document.getElementById('competencias-content').innerHTML = `
+                    &nbsp;•manejo de lenguajes c, c++, python, java.<br>
+                    &nbsp;•manejo de programas excel, word, power point.<br>
+                    &nbsp;•manejo de registros y bases de datos.<br>
+                    &nbsp;•investigación y desarrollo.<br>
+                    &nbsp;•atención al cliente.<br>
+                    &nbsp;•organización.<br>
+                    &nbsp;•trabajo en equipo.<br>
+                    &nbsp;•competencias digitales.
+                `;
+                document.getElementById('sintesis-title').innerText = 'SINTESIS';
+                document.getElementById('sintesis-content').innerHTML = `
+                    &nbsp;Estudiante con gran capacidad de organización y disciplina y con ansias<br>
+                    &nbsp;de aprender. Abordo mis estudios con responsabilidad, priorizando mi<br>
+                    &nbsp;formación académica para obtener resultados que lo reflejen. Quisiera<br>
+                    &nbsp;continuar perfeccionando mis habilidades y conocimientos.<BR>
+                `;
+                document.getElementById('experiencia-title').innerText = 'EXPERIENCIA';
+                document.getElementById('experiencia-content').innerHTML = `
+                    &nbsp;&nbsp;&nbsp;Enero 2015 - presente <BR>
+                    &nbsp;&nbsp;&nbsp;Abarrotes Ruiz | San Pedrito , Tlaquepaque, Jalisco Cajero <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;• Limpieza, organización y mantenimiento de la zona de trabajo. <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;• Registro detallado de todas las transacciones para asegurar el cuadre de caja al final del día. <BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;• Atención al cliente de manera amable y profesional. <BR>
+                `;
+                document.getElementById('estudios-title').innerText = 'ESTUDIOS';
+                document.getElementById('estudios-content').innerHTML = `
+                    &nbsp;&nbsp;&nbsp;&nbsp;Agosto 2019 - Junio 2025<BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Licenciatura en curso: Ingenieria en Computacion<BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CUCEI Universidad de Guadalajara | Guadalajara<BR>
+                        <BR>
+
+                        </BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;enero 2016 - diciembre 2018<BR>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Estudio Nivel Medio Superior finalizado (Escuela Vocacional - Universidad de Guadalajara).<BR>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
